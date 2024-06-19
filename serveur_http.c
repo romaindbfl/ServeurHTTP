@@ -159,8 +159,7 @@ void handle_client(int client_socket, const char *document_root, const char *cli
 void sigchld_handler(int sig)
 {
     // Récolter tous les processus zombies
-    while (waitpid(-1, NULL, WNOHANG) > 0)
-        ;
+    while (waitpid(-1, NULL, WNOHANG) > 0);
 }
 
 int main(int argc, char *argv[])
